@@ -14,18 +14,27 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+h3 {
+  margin-top: 3rem;
+}
+
+h4, h5, h6 {
+  font-size: 1.3rem;
 }
 
 ul {
   list-style: none;
 }
 
-a {
-  color: #FFF;
+.list-bullet {
+  list-style: initial;
 }
 
-section, nav {
-  margin: 2rem auto;
+a {
+  color: #FFF;
 }
 
 .material-icons.md-12 { font-size: 12px; }
@@ -51,6 +60,16 @@ section, nav {
   --aquamarine: #80FFDB;
 }
 
+::-moz-selection { /* Code for Firefox */
+  color: #FFF;
+  background: var(--sky-blue);
+}
+
+::selection {
+  color: #FFF;
+  background: var(--sky-blue);
+}
+
 .page__header {
   text-align: center;
   padding: 1.5rem;
@@ -67,28 +86,48 @@ section, nav {
   color: #FFF;
 }
 
-.main {
+.main, .subject__section {
   padding: 0 1.5rem;
   margin: 2rem auto;
   display: flex;
   flex-direction: column;
 }
 
-.main__header {
+.main__header, .subject__section {
   text-align: center;
   padding: 0 1rem;
 }
 
-.main__header__icon {
+.main__header__icon, .subject__section {
   width: 80%;
   max-width: 100%;
 }
 
-.main__header__content {
+.main__header__content, .subject__description {
   margin-top: .75rem;
 }
 
+.subject {
+  margin-top: .25rem;
+}
+
+.subject:not(:first-of-type) {
+  margin-top: 3rem;
+}
+
+.subject__title {
+  font-size: 1.125rem;
+}
+
+.subject__icon {
+  max-width: 90%;
+}
+
 @media screen and (min-width: 768px) {
+  .list-bullet {
+    margin-left: 1.75rem;
+  }
+
   .page__header__title {
     width: 50%;
     margin: auto;
@@ -97,6 +136,7 @@ section, nav {
   .main__header {
     text-align: left;
     display: flex;
+    align-items: center;
     margin: 0 4rem;
   }
 
@@ -107,5 +147,44 @@ section, nav {
   .main__header__content {
     width: 100%;
     padding-right: 2.5rem;
+  }
+
+  .nav {
+    margin-top: 3.5rem;
+  }
+
+  .subject__section {
+    margin: 2rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .subject {
+    display: flex;
+    align-items: center;
+  }
+
+  .subject:not(:first-of-type) {
+    margin-top: 2.5rem;
+  }
+
+  .subject div {
+    flex-direction: column;
+    margin: 0 4rem;
+  }
+
+  .subject__icon {
+    max-width: 20vw;
+  }
+
+  .subject__title {
+    text-align: left;
+  }
+
+  .subject__description {
+    margin-top: 1rem;
+    padding-right: 3.5rem;
+    text-align: left;
   }
 }
