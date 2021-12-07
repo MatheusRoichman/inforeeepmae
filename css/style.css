@@ -6,7 +6,7 @@
 
 body {
   width: 100%;
-  height: 500vh;
+  height: 100vh;
   font: 1.2rem/1.6 'Open Sans', sans-serif;
   background-color: #111;
   color: #FFF;
@@ -28,6 +28,8 @@ section, nav {
   margin: 2rem auto;
 }
 
+.material-icons.md-12 { font-size: 12px; }
+.material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
 
@@ -57,8 +59,6 @@ section, nav {
 .page__header__title {
   line-height: 1.4;
   background-image: linear-gradient(to right, var(--li-blue), var(--sky-blue));
-  /*background-image: linear-gradient(to right, var(--fl-violet), var(--blue));*/
-  /*background-image: linear-gradient(to right, var(--turquoise), var(--li-sky-blue), var(--sky-blue));*/
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -67,56 +67,25 @@ section, nav {
   color: #FFF;
 }
 
-.icon {
-  width: 75%;
-  height: 75%;
-}
-
 .main {
-  padding: 1.25rem 3rem;
+  padding: 0 1.5rem;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .main__header {
-  display: flex;
-  flex-direction: column;
   text-align: center;
+  padding: 0 1rem;
 }
 
 .main__header__icon {
-  flex-basis: 100%;
-  margin: auto;
+  width: 80%;
+  max-width: 100%;
 }
 
-.main__header div {
-  margin: .7rem auto;
-}
-
-.main__nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.nav__list div {
-  text-align: center;
-  flex-basis: 30%;
-  flex-grow: 1;
-  flex-direction: column;
-}
-
-.list__icon {
-  padding: 2rem;
-  border-radius: 50%;
-  background-color: var(--li-blue);
-}
-
-.nav__list li {
-  margin: 1rem auto;
-}
-
-.nav__list li p {
-  font-size: 1.1rem;
-  margin-top: .25rem;
+.main__header__content {
+  margin-top: .75rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -124,24 +93,19 @@ section, nav {
     width: 50%;
     margin: auto;
   }
-  
-  .main {
-    margin: 2rem auto;
-  }
-  
+
   .main__header {
-    flex-direction: row;
-    align-items: flex-start; 
     text-align: left;
+    display: flex;
+    margin: 0 4rem;
   }
-  
-  .main__header__icon {
-    flex-basis: 40%;
-    width: 40%;
-    height: 40%;
-  }
-  
+
   .main__header div {
-    margin: 0 2rem;
+    margin-left: 1rem;
+  }
+
+  .main__header__content {
+    width: 100%;
+    padding-right: 2.5rem;
   }
 }
