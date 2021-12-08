@@ -15,7 +15,48 @@
 </head>
 
 <body>
-  <header class="page__header">
+  <nav class="mobile-navbar" id="mobile-navbar">
+    <ul class="nav__list">
+      <li>
+        <a href="#page__header" class="nav__link" onclick="toggleSidebar()">Início</a>
+      </li>
+      <li>
+        <a href="#materias__title" class="nav__link" onclick="toggleSidebar()">Matérias</a>
+      </li>
+      <li>
+        <a href="#professores__title" class="nav__link" onclick="toggleSidebar()">Professores</a>
+      </li>
+      <li>
+        <a href="#sobre-ti__title" class="nav__link" onclick="toggleSidebar()">Sobre TI</a>
+      </li>
+    </ul>
+  </nav>
+
+  <nav class="desktop-navbar" id="desktop-navbar">
+    <ul class="nav__list">
+        <li>
+          <a href="#page__header" class="nav__link">Início</a>
+        </li>
+        <li>
+          <a href="#materias__title" class="nav__link">Matérias</a>
+        </li>
+        <li>
+          <a href="#professores__title" class="nav__link">Professores</a>
+        </li>
+        <li>
+          <a href="#sobre-ti__title" class="nav__link">Sobre TI</a>
+        </li>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="mobile-navbar-toggler" class="mobile-navbar-toggler">
+    <button type="button" class="mobile-navbar-toggler__button material-icons md-36" onclick="toggleSidebar()">
+      menu
+    </button>
+  </div>
+
+  <header id="page__header" class="page__header">
     <h1 class="page__header__title">Curso Técnico em Informática EEEPMAE</h1>
   </header>
   <main class="main">
@@ -24,24 +65,10 @@
       <div>
         <h2 class="main__header__title">O curso que abre portas.</h2>
         <p class="main__header__content">Desenvolvimento de software, design, redes, manutenção de computadores...são inúmeras as carreiras que um Técnico em Informática pode seguir.</p>
-
-        <nav class="nav">
-          <ul class="nav__list list-bullet">
-            <li>
-              <a class="nav__link" href="#materias">Matérias</a>
-            </li>
-            <li>
-              <a class="nav__link" href="#professores">Professores</a>
-            </li>
-            <li>
-              <a class="nav__link" href="#sobre-ti">Sobre a área de TI</a>
-            </li>
-          </ul>
-        </nav>
       </div>
     </header>
 
-    <h3>Matérias</h3>
+    <h3 id="materias__title">Matérias</h3>
 
     <section class="subject__section" id="materias">
       <article class="subject">
@@ -61,6 +88,7 @@
       </article>
     </section>
   </main>
+
   <script src="/js/index.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
