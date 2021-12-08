@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
-h3 {
+h3, .list-bullet {
   margin-top: 3rem;
 }
 
@@ -31,6 +31,7 @@ ul {
 
 .list-bullet {
   list-style: initial;
+  text-align: left;
 }
 
 a {
@@ -87,24 +88,31 @@ a {
 }
 
 .main, .subject__section {
-  padding: 0 1.5rem;
   margin: 2rem auto;
   display: flex;
   flex-direction: column;
 }
 
-.main__header, .subject__section {
+.main {
+  padding: 0 1.5rem;
+}
+
+.main__header {
   text-align: center;
   padding: 0 1rem;
 }
 
-.main__header__icon, .subject__section {
+.main__header__icon, .subject__icon {
   width: 80%;
   max-width: 100%;
 }
 
 .main__header__content, .subject__description {
   margin-top: .75rem;
+}
+
+.subject__section {
+  text-align: center;
 }
 
 .subject {
@@ -123,6 +131,24 @@ a {
   max-width: 90%;
 }
 
+@media screen and (min-width: 992px) {
+  main__header {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    margin: 0 4rem;
+  }
+  
+  .main__header div {
+    margin-left: 1rem;
+  }
+  
+  .main__header__content {
+    width: 100%;
+    padding-right: 2.5rem;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .list-bullet {
     margin-left: 1.75rem;
@@ -131,22 +157,6 @@ a {
   .page__header__title {
     width: 50%;
     margin: auto;
-  }
-
-  .main__header {
-    text-align: left;
-    display: flex;
-    align-items: center;
-    margin: 0 4rem;
-  }
-
-  .main__header div {
-    margin-left: 1rem;
-  }
-
-  .main__header__content {
-    width: 100%;
-    padding-right: 2.5rem;
   }
 
   .nav {
@@ -164,14 +174,19 @@ a {
     display: flex;
     align-items: center;
   }
+  
+  .subject:nth-child(even) {
+    flex-direction: row-reverse;
+    text-align: left;
+  }
 
   .subject:not(:first-of-type) {
-    margin-top: 2.5rem;
+    margin-top: 3.5rem;
   }
 
   .subject div {
     flex-direction: column;
-    margin: 0 4rem;
+    width: calc(100% - 4rem);
   }
 
   .subject__icon {
@@ -186,5 +201,14 @@ a {
     margin-top: 1rem;
     padding-right: 3.5rem;
     text-align: left;
+  }
+  
+  .subject:nth-child(odd) .subject__title, .subject:nth-child(odd) .subject__description {
+    text-align: right;
+  }
+  
+  .subject:nth-child(odd) .subject__description {
+    padding-right: 0;
+    padding-left: 3.5rem;
   }
 }
