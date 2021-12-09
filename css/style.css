@@ -146,7 +146,7 @@ a {
   color: #FFF;
 }
 
-.main, .subject__section {
+.main, .subject__section, .teacher__section {
   margin: 2rem auto;
   display: flex;
   flex-direction: column;
@@ -166,33 +166,33 @@ a {
   max-width: 100vw;
 }
 
-.main__header__content, .subject__description {
+.main__header__content, .subject__description, .teacher__description {
   margin-top: .75rem;
 }
 
-.subject__section {
+.subject__section, .teacher__section {
   text-align: center;
 }
 
-.subject {
+.subject, .teacher {
   margin-top: .25rem;
 }
 
-.subject:not(:first-of-type) {
+.subject:not(:first-of-type), .teacher:not(:first-of-type) {
   margin-top: 3rem;
 }
 
-.subject__title {
+.subject__title, .teacher__name {
   margin-top: 1rem;
   font-size: 1.125rem;
 }
 
-.subject__icon {
+.subject__icon, .teacher__photo {
   width: 60%;
 }
 
 @media screen and (min-width: 475px) {
-  .subject__icon {
+  .subject__icon, .teacher__photo {
     width: 40%;
   }
 }
@@ -249,7 +249,7 @@ a {
 }
 
 @media screen and (min-width: 1100px) {
-  .subject__section {
+  .subject__section, .teacher__section {
     margin: 2rem 5rem;
     padding: 0 7.5rem;
     display: flex;
@@ -257,46 +257,54 @@ a {
     justify-content: center;
   }
 
-  .subject {
+  .subject, .teacher {
     display: flex;
     align-items: center;
   }
 
-  .subject:nth-child(even) {
+  .subject:nth-child(even), .teacher:nth-child(even) {
     flex-direction: row-reverse;
     text-align: left;
   }
 
-  .subject:not(:first-of-type) {
+  .subject:not(:first-of-type), .teacher:not(:first-of-type) {
     margin-top: 4rem;
   }
 
-  .subject div {
+  .subject div, .teacher div {
     flex-direction: column;
     width: calc(100% - 4rem);
   }
 
-  .subject__icon {
+  .subject__icon, .teacher__photo {
     flex-basis: 30%;
     height: 100%;
   }
 
-  .subject__title {
+  .subject__title, .teacher__name {
     text-align: left;
   }
 
-  .subject__description {
+  .subject__description, .teacher__description {
     width: 85%;
     margin-top: 1rem;
     text-align: left;
   }
 
-  .subject:nth-child(odd) .subject__title, .subject:nth-child(odd) .subject__description {
+  .subject:nth-child(odd) .subject__title, .subject:nth-child(odd) .subject__description, .teacher:nth-child(odd) .teacher__name .teacher:nth-child(odd) .teacher__description {
     text-align: right;
     float: right;
   }
 
-  .subject:nth-child(odd) .subject__description {
+  .subject:nth-child(odd) .subject__description, .teacher:nth-child(odd) .teacher__description  {
     padding-right: 0;
+  }
+
+  .teacher:nth-child(even) .teacher__name, .teacher:nth-child(even) .teacher__description {
+    margin-right: 1.5rem;
+  }
+
+  .teacher:nth-child(odd) .teacher__name, .teacher:nth-child(odd) .teacher__description {
+    margin-left: 1.5rem;
   }
 }
