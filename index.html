@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Open+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen" />
 </head>
 
@@ -54,6 +55,23 @@
     <button type="button" class="mobile-navbar-toggler__button material-icons md-36" onclick="toggleSidebar()">
       menu
     </button>
+  </div>
+  
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="/img/divulgacao/divul-1.jpg" alt="Imagem de divulgação do Curso Técnico em Informática com fotos dos alunos." />
+      </div>
+      <div class="swiper-slide">
+        <img src="/img/divulgacao/divul-2.jpg" alt="Imagem de divulgação do Curso Técnico em Informática com fotos dos alunos." />
+      </div>
+      <div class="swiper-slide">
+        <img src="/img/divulgacao/divul-3.jpg" alt="Imagem de divulgação do Curso Técnico em Informática com fotos dos alunos." />
+      </div>
+    </div>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
   </div>
 
   <header id="page__header" class="page__header">
@@ -103,6 +121,15 @@
         </div>
       </article>
     </section>
+    
+    <div class="swiper">
+      <div class="swiper-wrapper" id="alunos-swiper">
+        
+      </div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
 
     <h3 id="professores">Professores</h3>
 
@@ -111,7 +138,7 @@
         <img class="teacher__photo" src="/img/professores/lucas-amaral-prof.png" alt="">
         <div>
           <h4 class="teacher__name">Lucas Amaral</h4>
-          <p class="teacher__description">Descrição breve/média do professor a ser descrito. Também deve dizer as suas principais matérias.</p>
+          <p class="teacher__description">Professor e coordenador do Curso Técnico em Informática. Formado em Redes de Computadores pelo <strong>IFCE de Canindé</strong> e <strong>técnico em Informática</strong> pela EEEP Isaias Gonçalves Damasceno.</p>
         </div>
       </article>
 
@@ -119,12 +146,13 @@
         <img class="teacher__photo" src="/img/professores/marques-amaro-prof.png" alt="">
         <div>
           <h4 class="teacher__name">Marques Amaro</h4>
-          <p class="teacher__description">Descrição breve/média do professor a ser descrito. Também deve dizer as suas principais matérias.</p>
+          <p class="teacher__description">Professor e orientador de estágio do Curso Técnico em Informática. Formado em Sistemas de Informação pela <strong>UFC de Quixadá</strong> e <strong>técnico em Informática</strong> pela EEEP Manoel Mano.</p>
         </div>
       </article>
     </section>
   </main>
 
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="/js/index.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
