@@ -86,6 +86,7 @@ a {
 
 .mobile-navbar {
   position: fixed;
+  top: 0;
   right: -100vw;
   transition: all 1s ease-in-out;
   width: 100vw;
