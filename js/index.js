@@ -5,7 +5,9 @@ const toggleSidebar = () => {
 const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   loop: true,
-  autoplay: true,
+  autoplay: {
+    disableOnInteraction: false
+  },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
