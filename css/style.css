@@ -102,10 +102,6 @@ a {
   right: 0;
 }
 
-.sidebar-active {
-  overflow-y: hidden;
-}
-
 .mobile-navbar .nav__link {
   font-size: 1.4rem;
 }

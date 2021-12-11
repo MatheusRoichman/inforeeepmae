@@ -1,6 +1,5 @@
 const toggleSidebar = () => {
   document.querySelector('#mobile-navbar').classList.toggle('active');
-  document.body.classList.toggle('sidebar-active');
 };
 
 const swiper = new Swiper('.swiper', {
