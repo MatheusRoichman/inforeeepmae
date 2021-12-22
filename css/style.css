@@ -324,3 +324,8 @@ a {
     margin-left: 1.5rem;
   }
 }
+
+footer {
+    margin-top: 2.5rem;
+    padding: 0 0 1.5rem 1.5rem;
+}
